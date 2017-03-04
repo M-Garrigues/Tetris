@@ -3,25 +3,25 @@ package sample.Model;
 /**
  * Created by Mathieu on 03/03/2017.
  */
-public class Cell {
+public class CellBool {
 
-    private Piece piece;
+    private boolean taken;
 
-    public Cell (){
-        this.piece = null;
+    public CellBool (){
+        this.taken = false;
     }
 
-    public Cell (Piece piece){
-        this.piece = piece;
+    public CellBool (boolean state){
+        this.taken = state;
     }
 
 
 
-    public void takePiece(){
-        this.piece = null;
+    public void toggle(){
+        this.taken = !this.taken;
     }
 
-    public void putPiece(Piece piece){
+    public void putPiece(){
 
         if(this.piece != null){
             System.out.println("Current cell was already taken by another piece. Problems may result.");

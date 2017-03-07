@@ -1,4 +1,4 @@
-package sample.model;
+package sample.BoardGameLib.model;
 
 import org.jetbrains.annotations.Contract;
 
@@ -46,7 +46,6 @@ public class ObsGrid extends Observable{
         pieces.add(piece);
         changed();
     }
-
 
     public void emptyLine(int y){
         for(int i = 0; i < grid.getSizeX(); i++){

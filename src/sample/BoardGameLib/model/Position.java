@@ -1,4 +1,4 @@
-package sample.model;
+package sample.BoardGameLib.model;
 
 /**
  * Created by Mathieu on 10/01/2017.

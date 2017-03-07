@@ -7,9 +7,43 @@ package sample.model;
 public class Grid {
 
     private Cell[][] tabCell;
+
+    public Cell[][] getTabCell() {
+        return tabCell;
+    }
+
+    public void setTabCell(Cell[][] tabCell) {
+        this.tabCell = tabCell;
+    }
+
     private int sizeX;
     private int sizeY;
 
+
+
+
+
+
+    public Cell getCell(Position position){
+        return tabCell[position.getX()][position.getY()];
+    }
+
+
+    public int getSizeX() {
+        return sizeX;
+    }
+
+    public void setSizeX(int sizeX) {
+        this.sizeX = sizeX;
+    }
+
+    public int getSizeY() {
+        return sizeY;
+    }
+
+    public void setSizeY(int sizeY) {
+        this.sizeY = sizeY;
+    }
 
     public Grid(){
         tabCell = new Cell[0][0];
@@ -23,8 +57,5 @@ public class Grid {
         sizeY = y;
     }
 
-    public void emptyLine(int y){for(int i = 0; i < sizeX; i++){
-            tabCell[i][y].empty();
-        }
-    }
+
 }

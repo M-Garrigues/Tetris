@@ -1,4 +1,4 @@
-package sample.BoardGameLib.model;
+package sample.boardGameLib.model;
 
 import org.jetbrains.annotations.Contract;
 
@@ -47,14 +47,6 @@ public class ObsGrid extends Observable{
         changed();
     }
 
-    public void emptyLine(int y){
-        for(int i = 0; i < grid.getSizeX(); i++){
-        grid.getTabCell()[i][y].empty();
-        }
-
-        changed();
-    }
-
 
     public boolean fits(Piece piece){
         boolean fits = true;
@@ -64,15 +56,6 @@ public class ObsGrid extends Observable{
 
         return fits;
     }
-
-
-
-    public void changed(){
-        setChanged();
-        notifyObservers();
-    }
-
-
 
     public boolean fits(Piece piece, Direction dir){
         boolean fits = true;
@@ -118,8 +101,6 @@ public class ObsGrid extends Observable{
     }
 
 
-
-
     public void move(Piece piece, Direction dir){
 
         // THIS FUNCTION NEED THE FUNCTION FIT TO BE CALLED BEFORE IT
@@ -158,6 +139,20 @@ public class ObsGrid extends Observable{
         }
 
         changed();
+    }
+
+
+    public void emptyLine(int y){
+        for(int i = 0; i < grid.getSizeX(); i++){
+            grid.getTabCell()[i][y].empty();
+        }
+
+        changed();
+    }
+
+    public void changed(){
+        setChanged();
+        notifyObservers();
     }
 
 

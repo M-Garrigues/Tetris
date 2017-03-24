@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="684e9999-e20b-4b46-ae05-84e7b9e6ce25" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/boardGameLib/model/AbstractGrid.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/observer/Observable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/observer/Observer.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/BoardGameLib/model/Grid.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/BoardGameLib/model/ObsGrid.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sample/BoardGameLib/model/Cell.java" afterPath="$PROJECT_DIR$/src/sample/boardGameLib/model/Cell.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sample/BoardGameLib/model/ObsGrid.java" afterPath="$PROJECT_DIR$/src/sample/boardGameLib/model/Grid.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sample/BoardGameLib/model/Piece.java" afterPath="$PROJECT_DIR$/src/sample/boardGameLib/model/Piece.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sample/BoardGameLib/model/Position.java" afterPath="$PROJECT_DIR$/src/sample/boardGameLib/model/Position.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/observer/Observable.java" afterPath="$PROJECT_DIR$/src/sample/observer/Observable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/observer/Observer.java" afterPath="$PROJECT_DIR$/src/sample/observer/Observer.java" />
     </list>
     <ignored path="Tetris.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Observable.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Observable.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/observer/Observable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+            <state relative-caret-position="153">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,8 +76,8 @@
       <file leaf-file-name="Observer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/observer/Observer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="136">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -110,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Grid.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Grid.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/boardGameLib/model/Grid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-599">
-              <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+            <state relative-caret-position="170">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#Direction#0;class#Grid#0" expanded="false" />
@@ -171,10 +164,10 @@
         <option value="$PROJECT_DIR$/src/sample/BoardGameLib/model/Position.java" />
         <option value="$PROJECT_DIR$/src/sample/BoardGameLib/model/ObsGrid.java" />
         <option value="$PROJECT_DIR$/src/sample/BoardGameLib/model/Grid.java" />
-        <option value="$PROJECT_DIR$/src/sample/observer/Observer.java" />
-        <option value="$PROJECT_DIR$/src/sample/observer/Observable.java" />
         <option value="$PROJECT_DIR$/src/sample/boardGameLib/model/AbstractGrid.java" />
         <option value="$PROJECT_DIR$/src/sample/boardGameLib/model/Grid.java" />
+        <option value="$PROJECT_DIR$/src/sample/observer/Observer.java" />
+        <option value="$PROJECT_DIR$/src/sample/observer/Observable.java" />
       </list>
     </option>
   </component>
@@ -272,54 +265,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="observer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tetris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tetris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="boardGameLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tetris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tetris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="boardGameLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1081,22 +1026,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/observer/Observer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/observer/Observable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/boardGameLib/model/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1124,14 +1053,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/boardGameLib/model/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-599">
-          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+        <state relative-caret-position="170">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#Direction#0;class#Grid#0" expanded="false" />
             <element signature="method#fits#0;class#Grid#0" expanded="false" />
             <element signature="method#fits#1;class#Grid#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/observer/Observer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/observer/Observable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

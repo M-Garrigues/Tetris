@@ -150,9 +150,142 @@ public class Grid extends AbstractGrid{
     }
 
 
+    public boolean reverse(Piece piece){
+        Piece testPiece = new Piece(piece);
+
+        boolean check = true;
+
+        int xCenter = testPiece.getCenter().getX();
+        int yCenter = testPiece.getCenter().getY();
+
+        int xTest;
+        int yTest;
+
+        int yDiff;
+        int xDiff;
+
+        int xNew;
+        int yNew;
+
+        for(Position pos: testPiece.getShape()){
+            xTest = pos.getX();
+            yTest = pos.getY();
+
+            xDiff = xTest - xCenter;
+            yDiff = yTest - yCenter;
+
+            xNew = xCenter - xDiff;
+            yNew = yCenter - yDiff;
+
+            if(xNew < 0 || xNew > getSizeX() -1 || yNew < 0 || yNew > getSizeY() - 1 ){
+                check = false;
+            }
+
+            pos.setX(xNew);
+            pos.setY(yNew);
+        }
 
 
+        if(fits(testPiece) && check){
+            piece = testPiece;
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 
+
+    public boolean rotateRight(Piece piece){
+        Piece testPiece = new Piece(piece);
+
+        boolean check = true;
+
+        int xCenter = testPiece.getCenter().getX();
+        int yCenter = testPiece.getCenter().getY();
+
+        int xTest;
+        int yTest;
+
+        int yDiff;
+        int xDiff;
+
+        int xNew;
+        int yNew;
+
+        for(Position pos: testPiece.getShape()){
+            xTest = pos.getX();
+            yTest = pos.getY();
+
+            xDiff = xTest - xCenter;
+            yDiff = yTest - yCenter;
+
+            xNew = xCenter + yDiff;
+            yNew = yCenter - xDiff;
+
+            if(xNew < 0 || xNew > getSizeX() -1 || yNew < 0 || yNew > getSizeY() - 1 ){
+                check = false;
+            }
+
+            pos.setX(xNew);
+            pos.setY(yNew);
+        }
+
+
+        if(fits(testPiece) && check){
+            piece = testPiece;
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+
+    public boolean rotateLeft(Piece piece){
+        Piece testPiece = new Piece(piece);
+
+        boolean check = true;
+
+        int xCenter = testPiece.getCenter().getX();
+        int yCenter = testPiece.getCenter().getY();
+
+        int xTest;
+        int yTest;
+
+        int yDiff;
+        int xDiff;
+
+        int xNew;
+        int yNew;
+
+        for(Position pos: testPiece.getShape()){
+            xTest = pos.getX();
+            yTest = pos.getY();
+
+            xDiff = xTest - xCenter;
+            yDiff = yTest - yCenter;
+
+            xNew = xCenter - yDiff;
+            yNew = yCenter + xDiff;
+
+            if(xNew < 0 || xNew > getSizeX() -1 || yNew < 0 || yNew > getSizeY() - 1 ){
+                check = false;
+            }
+
+            pos.setX(xNew);
+            pos.setY(yNew);
+        }
+
+
+        if(fits(testPiece) && check){
+            piece = testPiece;
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 
 
 

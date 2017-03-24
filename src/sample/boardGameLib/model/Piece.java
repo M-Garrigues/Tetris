@@ -19,6 +19,11 @@ public class Piece {
     }
 
 
+    public Piece (Piece piece){
+        this.center = piece.center;
+        this.shape = piece.shape;
+    }
+
     public Position getCenter() {
         return center;
     }

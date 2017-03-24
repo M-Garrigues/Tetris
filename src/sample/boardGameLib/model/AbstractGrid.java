@@ -34,6 +34,13 @@ public abstract class AbstractGrid implements Observable {
 
 
 
+    public AbstractGrid(int x, int y){
+        sizeX = x;
+        sizeY = y;
+
+        tabCell = new Cell[x][y];
+    }
+
 
 
 

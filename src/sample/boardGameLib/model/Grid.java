@@ -3,12 +3,11 @@ package sample.boardGameLib.model;
 import org.jetbrains.annotations.Contract;
 
 import java.util.ArrayList;
-import java.util.Observable;
 
 /**
  * Coded by Mathieu GARRIGUES on 07/03/2017.
  */
-public class ObsGrid extends Observable{
+public class Grid extends AbstractGrid{
 
     private Grid grid;
     private ArrayList<Piece> pieces;
@@ -44,7 +43,7 @@ public class ObsGrid extends Observable{
         // THIS FUNCTION NEEDS A FITS CALL BEFORE.
 
         pieces.add(piece);
-        changed();
+        notifyObserversPiece(piece);
     }
 
 
@@ -138,7 +137,7 @@ public class ObsGrid extends Observable{
 
         }
 
-        changed();
+        notifyObserversPiece(piece);
     }
 
 
@@ -147,11 +146,6 @@ public class ObsGrid extends Observable{
             grid.getTabCell()[i][y].empty();
         }
 
-        changed();
-    }
-
-    public void changed(){
-        setChanged();
         notifyObservers();
     }
 
@@ -189,10 +183,12 @@ public class ObsGrid extends Observable{
 
 
 
-    public ObsGrid() {
+
+
+    public Grid() {
     }
 
-    public ObsGrid(Grid grid, ArrayList<Piece> pieces) {
+    public Grid(Grid grid, ArrayList<Piece> pieces) {
         this.grid = grid;
         this.pieces = pieces;
     }

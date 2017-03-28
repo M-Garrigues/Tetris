@@ -6,7 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import sample.boardGameLib.model.Grid;
-import sample.observer.View;
 
 public class Main extends Application {
 

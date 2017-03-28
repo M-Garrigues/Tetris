@@ -10,11 +10,14 @@ public class Piece {
     private Position center;
     private ArrayList<Position> shape;
 
+    public Piece(){
+        this.center = new Position(0,0);
+        this.shape = new ArrayList<>();
+    }
 
 
-
-    public Piece(Position center) {
-        this.center = center;
+    public Piece(int x, int y) {
+        this.center = new Position(x,y);
         this.shape = new ArrayList<>();
     }
 

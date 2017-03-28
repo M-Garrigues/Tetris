@@ -37,6 +37,11 @@ public class Grid extends AbstractGrid{
     }
 
 
+    public Grid(){
+        super(1,1);
+        pieces = new ArrayList<Piece>();
+    }
+
     public Grid(int x, int y){
         super(x, y);
         pieces = new ArrayList<Piece>();
@@ -146,14 +151,6 @@ public class Grid extends AbstractGrid{
         notifyObserversPiece(piece);
     }
 
-
-    public void emptyLine(int y){
-        for(int i = 0; i < getSizeX(); i++){
-            getTabCell()[i][y].empty();
-        }
-
-        notifyObservers();
-    }
 
 
     public boolean rotate(Piece piece, Direction direction){

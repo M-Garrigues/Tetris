@@ -1,7 +1,8 @@
-package sample.observer;
+package sample.boardGameLib.view;
 
 import sample.Controller;
 import sample.boardGameLib.model.Piece;
+import sample.observer.Observer;
 
 import javax.swing.*;
 

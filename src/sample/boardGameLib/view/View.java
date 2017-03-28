@@ -1,6 +1,6 @@
 package sample.boardGameLib.view;
 
-import sample.Controller;
+import sample.Controler;
 import sample.boardGameLib.model.Piece;
 import sample.observer.Observer;
 
@@ -12,7 +12,7 @@ import javax.swing.*;
 public class View extends JFrame implements Observer {
 
     private JPanel container = new JPanel();
-    private Controller controler;
+    private Controler controler;
 
     public View (){
         //Settings for JFrame

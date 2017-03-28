@@ -1,13 +1,9 @@
 package sample.tetris;
 
-import javafx.stage.Stage;
-import sample.observer.Observer;
-import sample.tetris.pieces.TetrisPiece;
-
 /**
  * Coded by Mathieu GARRIGUES on 26/03/2017.
  */
-public class Tetris extends Stage implements Observer {
+/*public class Tetris extends Application implements Observer {
 
     TetrisBoard board;
 
@@ -20,4 +16,4 @@ public class Tetris extends Stage implements Observer {
 
 
 
-}
+}*/

@@ -3,7 +3,7 @@ package sample.tetris.pieces;
 import sample.boardGameLib.model.Piece;
 
 /**
- * Coded by Mathieu GARRIGUES on 28/03/2017.
+ * Coded by Mathieu GARRIGUES on 26/03/2017.
  */
 public class TetrisPiece extends Piece {
 

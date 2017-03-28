@@ -12,7 +12,7 @@ public class Grid extends AbstractGrid{
     private ArrayList<Piece> pieces;
 
 
-    private enum Direction{
+    public enum Direction{
         UP, DOWN, RIGHT, LEFT, NONE;
 
         @Contract("_ -> !null")
@@ -54,6 +54,7 @@ public class Grid extends AbstractGrid{
         // THIS FUNCTION NEEDS A FITS CALL BEFORE.
 
         pieces.add(piece);
+        toggleSpaceTaken(piece);
         notifyObserversPiece(piece);
     }
 
@@ -115,6 +116,8 @@ public class Grid extends AbstractGrid{
 
         // THIS FUNCTION NEED THE FUNCTION FIT TO BE CALLED BEFORE IT
 
+        toggleSpaceTaken(piece);
+
         switch (dir) {
 
 
@@ -148,12 +151,14 @@ public class Grid extends AbstractGrid{
 
         }
 
+        toggleSpaceTaken(piece);
         notifyObserversPiece(piece);
     }
 
 
 
     public boolean rotate(Piece piece, Direction direction){
+        toggleSpaceTaken(piece);
         Piece testPiece = new Piece(piece);
 
         boolean check = true;
@@ -198,6 +203,7 @@ public class Grid extends AbstractGrid{
             pos.setY(yNew);
         }
 
+        toggleSpaceTaken(piece);
 
         if(fits(testPiece) && check){
             piece = testPiece;
@@ -218,5 +224,15 @@ public class Grid extends AbstractGrid{
 
     public ArrayList<Piece> getPieces() {
         return pieces;
+    }
+
+
+
+
+    public void toggleSpaceTaken(Piece piece){
+        Cell cell;
+        for(Position pos : piece.getShape()){
+            getTabCell()[pos.getX()][ pos.getY()].toggle();
+        }
     }
 }

@@ -6,6 +6,7 @@ package sample.boardGameLib.model;
 public class Cell {
 
     private boolean taken;
+    Piece piece;
 
     public Cell(){
         this.taken = false;
@@ -17,15 +18,26 @@ public class Cell {
 
 
 
-    public void toggle(){
+    public void toggle(Piece piece){
         this.taken = !this.taken;
+
+        if(this.taken){
+            this.piece = piece;
+        }
+        else{
+            this.piece = null;
+        }
     }
 
-    public void empty(){ this.taken = false;}
+    public void empty(){
+        this.taken = false;
+        this.piece = null;}
 
     public boolean isEmpty(){
         return !this.taken;
     }
 
     public boolean isTaken() { return this.taken;}
+
+    public Piece getPiece(){return this.piece;}
 }

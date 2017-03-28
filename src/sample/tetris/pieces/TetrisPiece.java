@@ -1,4 +1,4 @@
-package sample.tetris;
+package sample.tetris.pieces;
 
 import sample.boardGameLib.model.Piece;
 
@@ -7,9 +7,16 @@ import sample.boardGameLib.model.Piece;
  */
 public class TetrisPiece extends Piece {
 
+    Color color;
+
     public TetrisPiece(int x, int y){
         super(x,y);
 
 
     }
+
+    public enum Color{
+        RED, BLUE, GREEN, YELLOW, ORANGE, PURPLE, LIGHTBLUE
+    }
+
 }

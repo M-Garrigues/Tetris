@@ -5,16 +5,16 @@ import sample.boardGameLib.model.Position;
 /**
  * Coded by Mathieu GARRIGUES on 28/03/2017.
  */
-public class PieceS extends TetrisPiece{
+public class PieceO extends TetrisPiece{
 
-    public PieceS(){
+    public PieceO(){
 
-        super(0, 5);
+        super(0, 4);
 
+        this.getShape().add(new Position(0,5));
         this.getShape().add(new Position(1,4));
         this.getShape().add(new Position(1,5));
-        this.getShape().add(new Position(0,6));
 
-        this.color = Color.YELLOW;
+        this.color = Color.GREEN;
     }
 }

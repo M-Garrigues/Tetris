@@ -1,8 +1,7 @@
 package sample.boardGameLib.model;
 
-import sample.tetris.pieces.TetrisPiece;
+import static sample.boardGameLib.model.Cell.Color.TRANSPARENT;
 
-import static sample.tetris.pieces.TetrisPiece.Color.*;
 
 /**
  * Created by Mathieu on 03/03/2017.
@@ -11,7 +10,13 @@ public class Cell {
 
     private boolean taken;
     private Piece piece;
-    private TetrisPiece.Color color;
+    protected Color color;
+
+
+    public enum Color{
+        RED, BLUE, GREEN, YELLOW, ORANGE, PURPLE, LIGHTBLUE, TRANSPARENT
+    }
+
 
     public Cell(){
         this.taken = false;
@@ -50,7 +55,7 @@ public class Cell {
 
     public Piece getPiece(){return this.piece;}
 
-    public TetrisPiece.Color getColor(){
+    public Color getColor(){
         return this.color;
     }
 }

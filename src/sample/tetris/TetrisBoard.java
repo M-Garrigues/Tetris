@@ -4,6 +4,10 @@ import sample.boardGameLib.model.Grid;
 import sample.boardGameLib.model.Position;
 import sample.tetris.pieces.TetrisPiece;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
+import static sample.boardGameLib.model.Grid.Direction.DOWN;
 import static sample.tetris.pieces.PieceGenerator.nextRandPiece;
 import static sample.tetris.pieces.PieceGenerator.randomPiece;
 
@@ -13,13 +17,14 @@ import static sample.tetris.pieces.PieceGenerator.randomPiece;
 
 public class TetrisBoard extends Grid{
 
-    int points = 0;
-    int level;
+    private int points = 0;
+    private int level;
 
-    boolean over;
+    private boolean over;
+    private boolean paused;
 
-    TetrisPiece currentPiece;
-    TetrisPiece nextPiece;
+    private TetrisPiece currentPiece;
+    private TetrisPiece nextPiece;
 
     public TetrisBoard(){
         super(25, 10);
@@ -29,33 +34,93 @@ public class TetrisBoard extends Grid{
     }
 
 
-    public void tickDown(){
-        if(fits(currentPiece, Direction.DOWN)){
-            move(currentPiece, Direction.DOWN);
+
+
+
+    public boolean tickDown(){
+        move(currentPiece, DOWN);
+
+        if(testPieceEnd(currentPiece)) { //the piece is now blocked
+            lockPiece();                //we end its existence here, and create a new one;
+            return true;
         }
-        else{
-            lockPiece();
+        else return false;
+    }
+
+
+
+
+
+    public boolean testPieceEnd(TetrisPiece piece){
+        if(blocked(piece)){
+            checkLines(piece);
+            return true;
+        }
+        else{return false;}
+    }
+
+
+    private boolean blocked(TetrisPiece piece){
+        if(fits(piece, DOWN)) return false;
+        else return true;
+    }
+
+
+    private void checkLines(TetrisPiece piece){
+        ArrayList<Integer> listY = new ArrayList<>();
+        int y;
+
+        for (Position pos: piece.getShape()) {
+            y = pos.getY();
+            if(!listY.contains(y)){
+                listY.add(y);
+            }
+        }
+
+        Collections.sort(listY, Collections.reverseOrder());
+
+        for(int line : listY){
+            if(isFull(line)){
+                emptyLine(line);
+            }
+        }
+    }
+
+
+    public void tickDown(int y){
+        for(int i = y; y > 1; i++){
+            for(int x = 0; x < getSizeX(); x++)
+                getTabCell()[x][i] = getTabCell()[x][i+1]; //takes the cell above on the grid for each line superior to the line deleted.
         }
     }
 
     public void lockPiece(){
-
         currentPiece = nextPiece;
         nextPiece = nextRandPiece(currentPiece);
     }
 
     public void emptyLine(int y){
         for(int i = 0; i < getSizeX(); i++){
-            getTabCell()[i][y].getPiece().getShape().remove(new Position(i, y)); //deletes the cube a piece have on this line
             getTabCell()[i][y].empty(); //suppresses the logical possession of the cell.
         }
-
         //will need to tick down every piece higher than this line.
 
         this.points += 200;
-
         notifyObservers();
     }
+
+
+    public boolean isFull(int y){
+
+        boolean check = true;
+
+        for(int i = 0; i < getSizeX(); i++){
+            if(getTabCell()[i][y].isEmpty()) check = false;
+        }
+
+        return check;
+    }
+
 
     public boolean isFinished(){
 

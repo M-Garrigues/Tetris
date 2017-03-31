@@ -12,8 +12,4 @@ public class TetrisPiece extends Piece {
 
     }
 
-    public enum Color{
-        RED, BLUE, GREEN, YELLOW, ORANGE, PURPLE, LIGHTBLUE, TRANSPARENT
-    }
-
 }

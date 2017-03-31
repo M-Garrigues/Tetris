@@ -1,5 +1,6 @@
 package sample.tetris.pieces;
 
+import sample.boardGameLib.model.Cell;
 import sample.boardGameLib.model.Position;
 
 /**
@@ -14,6 +15,6 @@ public class PieceI extends TetrisPiece{
         this.getShape().add(new Position(1,5));
         this.getShape().add(new Position(1,6));
 
-        this.color = Color.BLUE;
+        this.color = Cell.Color.BLUE;
     }
 }

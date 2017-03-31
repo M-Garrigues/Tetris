@@ -1,12 +1,17 @@
 package sample.boardGameLib.model;
 
+import sample.tetris.pieces.TetrisPiece;
+
+import static sample.tetris.pieces.TetrisPiece.Color.*;
+
 /**
  * Created by Mathieu on 03/03/2017.
  */
 public class Cell {
 
     private boolean taken;
-    Piece piece;
+    private Piece piece;
+    private TetrisPiece.Color color;
 
     public Cell(){
         this.taken = false;
@@ -23,15 +28,19 @@ public class Cell {
 
         if(this.taken){
             this.piece = piece;
+            this.color = piece.getColor();
         }
         else{
             this.piece = null;
+            this.color = TRANSPARENT;
         }
     }
 
     public void empty(){
         this.taken = false;
-        this.piece = null;}
+        this.piece = null;
+        this.color = TRANSPARENT;
+    }
 
     public boolean isEmpty(){
         return !this.taken;
@@ -40,4 +49,8 @@ public class Cell {
     public boolean isTaken() { return this.taken;}
 
     public Piece getPiece(){return this.piece;}
+
+    public TetrisPiece.Color getColor(){
+        return this.color;
+    }
 }

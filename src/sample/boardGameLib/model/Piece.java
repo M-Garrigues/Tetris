@@ -1,5 +1,7 @@
 package sample.boardGameLib.model;
 
+import sample.tetris.pieces.TetrisPiece;
+
 import java.util.ArrayList;
 
 /**
@@ -9,6 +11,9 @@ public class Piece {
 
     private Position center;
     private ArrayList<Position> shape;
+    private TetrisPiece.Color color;
+
+
 
     public Piece(){
         this.center = new Position(0,0);
@@ -41,5 +46,13 @@ public class Piece {
 
     public void setShape(ArrayList<Position> shape) {
         this.shape = shape;
+    }
+
+    public TetrisPiece.Color getColor() {
+        return color;
+    }
+
+    public void setColor(TetrisPiece.Color color) {
+        this.color = color;
     }
 }

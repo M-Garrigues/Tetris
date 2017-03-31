@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public abstract class AbstractGrid implements Observable {
 
-    private Cell[][] tabCell;
+    private sample.boardGameLib.model.Cell[][] tabCell;
 
     public Cell[][] getTabCell() {
         return tabCell;

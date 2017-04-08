@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import static sample.boardGameLib.model.Grid.Direction.DOWN;
+import static sample.boardGameLib.model.Grid.Direction.LEFT;
+import static sample.boardGameLib.model.Grid.Direction.RIGHT;
 import static sample.tetris.pieces.PieceGenerator.nextRandPiece;
 import static sample.tetris.pieces.PieceGenerator.randomPiece;
 
@@ -121,6 +123,26 @@ public class TetrisBoard extends Grid{
         return check;
     }
 
+    public void rotRight(){
+        rotate(currentPiece, RIGHT);
+    }
+
+    public void rotLeft(){
+        rotate(currentPiece, LEFT);
+    }
+
+
+    public void pause(){
+        this.paused = true;
+    }
+
+    public void unPause(){
+        this.paused = false;
+    }
+
+    public boolean isPaused(){
+        return this.paused;
+    }
 
     public boolean isFinished(){
 
